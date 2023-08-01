@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+    <style>
+        :root {
+           --size: 2.0;
+           --color: #ff7f27;
+        }
+    </style>
+    <template id="ascii" style="color: #ff7f27;">
+-----------------------------------------------------------------
+ $$$$$$\                                                       
+$$  __$$\                                                      
+$$ /  \__| $$$$$$\   $$$$$$\   $$$$$$\  $$$$$$\  $$$$$$\$$$$\  
+$$$$$$$\  $$  __$$\ $$  __$$\ $$  __$$\ \____$$\ $$  _$$  _$$\ 
+$$  __$$\ $$ /  $$ |$$ |  \__|$$ |  \__|$$$$$$$ |$$ / $$ / $$ |
+$$ /  $$ |$$ |  $$ |$$ |      $$ |     $$  __$$ |$$ | $$ | $$ |
+ $$$$$$  |\$$$$$$  |$$ |      $$ |     \$$$$$$$ |$$ | $$ | $$ |
+ \______/  \______/ \__|      \__|      \_______|\__| \__| \__|
+--------------------------  Welcome  ----------------------------
+Type '-help' to check all command                                                       
+    </template>
+    <script>
+        $('body').terminal({
+            help: function() {
+                this.echo(""+
+                            "- type '-who' for know who i'm \n"+
+                            "- type '-what' for know what i do \n");
+            },
+            what: function() {
+                this.echo("i'm a junior full stack developer , i'm intrested in cyber security and ethical hacking\nand i love anything related with IT");
+            },
+            who: function() {
+                this.echo("my name is abderrahmane gorram, i live in morroco and i'm a P-TECH student");
+            },
+        }, {
+            greetings: ascii.innerHTML
+        });
+
+        </script>
+</body>
+</html>
