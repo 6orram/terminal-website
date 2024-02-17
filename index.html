@@ -29,14 +29,17 @@ Type '-help' to check all command
         $('body').terminal({
             help: function() {
                 this.echo(""+
-                            "- type '-who' for know who i'm \n"+
-                            "- type '-what' for know what i do \n");
+                            "- type 'who' for know who i'm \n"+
+                            "- type 'what' for know what i do \n");
             },
             what: function() {
-                this.echo("i'm a junior full stack developer , i'm intrested in cyber security and ethical hacking\nand i love anything related with IT");
+                this.echo("currently i'm a P-TECH student and i'm a junior back-end developer, i'm intrested in electronics and embdeed systems\ni love anything related with IT");
             },
             who: function() {
-                this.echo("my name is abderrahmane gorram, i live in morroco and i'm a P-TECH student");
+                this.echo("my name is abderrahmane gorram, i have 19 years old and i live in morroco");
+            },
+            exit: function() {
+                window.close();
             },
         }, {
             greetings: ascii.innerHTML
