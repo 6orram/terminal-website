@@ -23,14 +23,16 @@ $$ /  $$ |$$ |  $$ |$$ |      $$ |     $$  __$$ |$$ | $$ | $$ |
  $$$$$$  |\$$$$$$  |$$ |      $$ |     \$$$$$$$ |$$ | $$ | $$ |
  \______/  \______/ \__|      \__|      \_______|\__| \__| \__|
 --------------------------  Welcome  ----------------------------
-Type '-help' to check all command                                                       
+Type 'help' to check all command                                                       
     </template>
     <script>
         $('body').terminal({
             help: function() {
                 this.echo(""+
                             "- type 'who' for know who i'm \n"+
-                            "- type 'what' for know what i do \n");
+                            "- type 'what' for know what i do \n"+
+                            "- type 'exit' to leave \n"
+                    );
             },
             what: function() {
                 this.echo("currently i'm a P-TECH student and i'm a junior back-end developer, i'm intrested in electronics and embdeed systems\ni love anything related with IT");
